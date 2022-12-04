@@ -22,49 +22,61 @@
         app:layout_constraintVertical_bias="0.268"
          />
 
+
     <EditText
         android:id="@+id/buatEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="92dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:text="Email"
-        tools:layout_editor_absoluteX="89dp"
-        tools:layout_editor_absoluteY="343dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/JudulJSleep"
+        />
 
     <EditText
         android:id="@+id/buatPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPassword"
         android:text="Password"
-        tools:layout_editor_absoluteX="89dp"
-        tools:layout_editor_absoluteY="415dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buatEmail" />
 
     <Button
         android:id="@+id/tombolLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="68dp"
         android:text="LOGIN"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="502dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buatPassword" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/DoNotHaveAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="32dp"
         android:text="Do Not Have Account?"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="581dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tombolLogin" />
 
     <TextView
         android:id="@+id/RegisterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="40dp"
         android:clickable="true"
         android:text="Register Now!"
         android:textColor="@android:color/holo_blue_dark"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="612dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/DoNotHaveAccount" />
 </androidx.constraintlayout.widget.ConstraintLayout>
