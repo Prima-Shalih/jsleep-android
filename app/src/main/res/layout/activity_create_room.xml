@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateRoomActivity">
+
+    <CheckBox
+        android:id="@+id/checkBoxBalcony"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:text="Balcony"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxWiFi"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxRestaurant" />
+
+    <CheckBox
+        android:id="@+id/checkBoxBathub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="4dp"
+        android:text="Bathtub"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxAC" />
+
+    <TextView
+        android:id="@+id/judulCreateRoom2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="36dp"
+        android:text="Facility"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InsertSizeCreateRoom" />
+
+    <CheckBox
+        android:id="@+id/checkBoxRefrigerator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Refrigerator"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxAC"
+        app:layout_constraintTop_toBottomOf="@+id/judulCreateRoom2" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSwimmingPool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="4dp"
+        android:text="Swimming Pool"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxBathub" />
+
+    <Button
+        android:id="@+id/CancelCreateRoomButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="20dp"
+        android:text="CANCEL"
+        app:layout_constraintStart_toEndOf="@+id/CreateRoomButton"
+        app:layout_constraintTop_toBottomOf="@+id/BedTypeSpinner" />
+
+    <Button
+        android:id="@+id/CreateRoomButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
+        android:text="CREATE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BedTypeCreateRoom" />
+
+    <TextView
+        android:id="@+id/BedTypeCreateRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="20dp"
+        android:text="Bed Type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CityCreateRoom" />
+
+    <Spinner
+        android:id="@+id/CitySpinner"
+        android:layout_width="102dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="24dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toEndOf="@+id/CityCreateRoom"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxFitnessCenter" />
+
+    <TextView
+        android:id="@+id/CityCreateRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="24dp"
+        android:text="City"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxSwimmingPool" />
+
+    <Spinner
+        android:id="@+id/BedTypeSpinner"
+        android:layout_width="105dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="16dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toEndOf="@+id/BedTypeCreateRoom"
+        app:layout_constraintTop_toBottomOf="@+id/CitySpinner" />
+
+    <CheckBox
+        android:id="@+id/checkBoxFitnessCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="4dp"
+        android:text="Fitness Center"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxSwimmingPool"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxBalcony" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
+        android:text="AC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judulCreateRoom2" />
+
+    <CheckBox
+        android:id="@+id/checkBoxWiFi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="4dp"
+        android:text="WiFi"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxBathub"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxRefrigerator" />
+
+    <CheckBox
+        android:id="@+id/checkBoxRestaurant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Restaurant"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxRefrigerator"
+        app:layout_constraintTop_toBottomOf="@+id/judulCreateRoom2" />
+
+    <EditText
+        android:id="@+id/insertPriceCreateRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Price"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InsertNameCreateRoom" />
+
+    <EditText
+        android:id="@+id/InsertNameCreateRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/JudulCreateRoom" />
+
+    <EditText
+        android:id="@+id/InsertSizeCreateRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InsertAddressCreateRoom" />
+
+    <TextView
+        android:id="@+id/JudulCreateRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="32dp"
+        android:text="Create Room"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/InsertAddressCreateRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/insertPriceCreateRoom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

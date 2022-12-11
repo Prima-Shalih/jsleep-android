@@ -10,12 +10,10 @@
     <item android:id="@+id/profile_button"
         android:icon="@drawable/ic_baseline_person_24"
         android:title="Profile Button"
-        app:actionViewClass="androidx.appcompat.widget.SearchView"
         app:showAsAction="collapseActionView|always"/>
 
     <item android:id="@+id/add_button"
         android:icon="@drawable/ic_baseline_add_box_24"
         android:title="Add Button"
-        app:actionViewClass="androidx.appcompat.widget.SearchView"
         app:showAsAction="collapseActionView|always"/>
 </menu>

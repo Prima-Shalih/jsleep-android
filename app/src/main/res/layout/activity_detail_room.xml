@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailRoomActivity">
+
+    <TextView
+        android:id="@+id/judulDetailRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="32dp"
+        android:text="Detail Room"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sizeTextDiDetailRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
+        android:text="Size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bedTypeTextDiDetailRoom" />
+
+    <TextView
+        android:id="@+id/bedTypeTextDiDetailRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
+        android:text="Bed Type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextDiDetailRoom" />
+
+    <TextView
+        android:id="@+id/nameTextDiDetailRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="32dp"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judulDetailRoom" />
+
+    <TextView
+        android:id="@+id/priceTextDiDetailRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
+        android:text="Price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sizeTextDiDetailRoom" />
+
+    <TextView
+        android:id="@+id/addressTextDiDetailRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
+        android:text="Address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priceTextDiDetailRoom" />
+
+    <TextView
+        android:id="@+id/AddressPilihanCustomerDiDetailRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="64dp"
+        android:text="Jl. Margonda Raya"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PricePilihanCustomerDiDetailRoom" />
+
+    <TextView
+        android:id="@+id/PricePilihanCustomerDiDetailRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="64dp"
+        android:text="100.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sizePilihanCustomerDiDetailRoom" />
+
+    <TextView
+        android:id="@+id/sizePilihanCustomerDiDetailRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="64dp"
+        android:text="30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bedTypePilihanCustomerDiDetailRoom" />
+
+    <TextView
+        android:id="@+id/bedTypePilihanCustomerDiDetailRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="64dp"
+        android:text="King"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameOfCustomerDiDetailRoom" />
+
+    <TextView
+        android:id="@+id/nameOfCustomerDiDetailRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        android:text="Prima"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judulDetailRoom" />
+
+    <CheckBox
+        android:id="@+id/checkBoxRestaurant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Restaurant"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxRefrigerator"
+        app:layout_constraintTop_toBottomOf="@+id/facilityTextDiDetailRoom" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSwimmingPool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="20dp"
+        android:text="Swimming Pool"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxBathub" />
+
+    <CheckBox
+        android:id="@+id/checkBoxRefrigerator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Refrigerator"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxAC"
+        app:layout_constraintTop_toBottomOf="@+id/facilityTextDiDetailRoom" />
+
+    <CheckBox
+        android:id="@+id/checkBoxFitnessCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
+        android:text="Fitness Center"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxSwimmingPool"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxBalcony" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="24dp"
+        android:text="AC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/facilityTextDiDetailRoom" />
+
+    <CheckBox
+        android:id="@+id/checkBoxBathub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="20dp"
+        android:text="Bathtub"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxAC" />
+
+    <CheckBox
+        android:id="@+id/checkBoxBalcony"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:text="Balcony"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxWiFi"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxRestaurant" />
+
+    <TextView
+        android:id="@+id/facilityTextDiDetailRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="48dp"
+        android:text="Facility"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CityDetailRoom" />
+
+    <CheckBox
+        android:id="@+id/checkBoxWiFi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
+        android:text="WiFi"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxBathub"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxRefrigerator" />
+
+    <TextView
+        android:id="@+id/CityDetailRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
+        android:text="City"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addressTextDiDetailRoom" />
+
+    <TextView
+        android:id="@+id/CityPilihanCustomerDiDetailRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="64dp"
+        android:text="Depok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddressPilihanCustomerDiDetailRoom" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
