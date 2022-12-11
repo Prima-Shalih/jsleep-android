@@ -6,6 +6,7 @@ import java.util.List;
 
 import PrimaShalihJSleepJS.jsleep_android.model.Account;
 import PrimaShalihJSleepJS.jsleep_android.model.BedType;
+import PrimaShalihJSleepJS.jsleep_android.model.Payment;
 import PrimaShalihJSleepJS.jsleep_android.model.Renter;
 import PrimaShalihJSleepJS.jsleep_android.model.Room;
 import PrimaShalihJSleepJS.jsleep_android.model.City;
@@ -58,5 +59,18 @@ public interface BaseApiService {
             @Query("address") String address,
             @Query("bedType") BedType bedType
     );
+
+    @POST("payment/create")
+    Call<Payment> createPayment(@Query("buyerId") int buyerId,
+                                @Query("renterId") int renterId,
+                                @Query("roomId") int roomId,
+                                @Query("from") String from,
+                                @Query("to") String to);
+
+    @POST("payment/{id}/accept")
+    Call<Boolean> accept(@Path("id") int id);
+
+    @POST("payment/{id}/cancel")
+    Call<Boolean> cancel(@Path("id") int id);
 
 }

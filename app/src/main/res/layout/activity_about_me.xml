@@ -79,18 +79,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/accountDetails" />
 
-            <EditText
-                android:id="@+id/plain_text_input_amount"
-                android:layout_width="72dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="104dp"
-                android:layout_marginTop="192dp"
-                android:inputType="text"
-                android:text="Amount"
-                android:textAlignment="center"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/accountDetails" />
+    <EditText
+        android:id="@+id/plain_text_input_amount"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="192dp"
+        android:hint="Amount"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accountDetails" />
 
             <Button
                 android:id="@+id/topUpButton"
@@ -100,6 +100,7 @@
                 android:layout_marginTop="180dp"
                 android:text="TOP UP"
                 android:backgroundTint="#1E2D52"
+                android:textColor="#FFFABB"
                 app:layout_constraintStart_toEndOf="@+id/plain_text_input_amount"
                 app:layout_constraintTop_toBottomOf="@+id/accountDetails" />
 
@@ -111,6 +112,7 @@
                 android:layout_marginTop="12dp"
                 android:text="Register Renter"
                 android:backgroundTint="#1E2D52"
+                android:textColor="#FFFABB"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/topUpButton" />
 
@@ -170,6 +172,8 @@
                     android:layout_marginStart="36dp"
                     android:layout_marginTop="180dp"
                     android:text="Register"
+                    android:backgroundTint="#1E2D52"
+                    android:textColor="#FFFABB"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/registerRenterInsertPhoneNumber"
                     />
@@ -180,6 +184,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cancel"
+                    android:backgroundTint="#1E2D52"
+                    android:textColor="#FFFABB"
                     android:layout_marginStart="200dp"
                     android:layout_marginTop="180dp"
                     />
@@ -245,7 +251,7 @@
             android:layout_marginTop="24dp"
             android:gravity="right"
             android:text="Netlab Store"
-            app:layout_constraintStart_toStartOf="@+id/NameOfRegisterRenter"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/DataOfRegisterRenter" />
 
         <TextView
@@ -256,7 +262,7 @@
             android:layout_marginTop="72dp"
             android:gravity="right"
             android:text="Gedung DTE Lantai 2"
-            app:layout_constraintStart_toStartOf="@+id/AddressOfRegisterRenter"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/DataOfCustomerNameOfRegisterRenter" />
 
         <TextView
@@ -267,10 +273,21 @@
             android:layout_marginTop="120dp"
             android:gravity="right"
             android:text="0123"
-            app:layout_constraintStart_toStartOf="@+id/PhoneNumberOfRegisterRenter"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/DataOfAddressOfRegisterRenter" />
 
     </androidx.cardview.widget.CardView>
 
+    <TextView
+        android:id="@+id/LogOutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:clickable="true"
+        android:text="Log Out"
+        android:textColor="#1E2D52"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balanceOfCustomer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

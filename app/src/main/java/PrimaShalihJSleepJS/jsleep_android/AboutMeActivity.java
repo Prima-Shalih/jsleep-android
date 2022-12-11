@@ -35,12 +35,13 @@ import retrofit2.Response;
 
 public class AboutMeActivity extends AppCompatActivity {
 
-    TextView namaKostumer, emailKostumer, saldoKostumer, customerName, customerPhoneNumber, customerAddress;
+    TextView namaKostumer, emailKostumer, saldoKostumer, customerName, customerPhoneNumber, customerAddress, topup, logOutButton;
     CardView cardview1, cardview2;
-    Button registerRenterButt, renterCancelButt, registerRenterRegisterButt;
+    Button registerRenterButt, renterCancelButt, registerRenterRegisterButt, topUpButton;
     BaseApiService mApiService;
-    EditText registPhoneNumber, registCustomerName, registAddressName;
+    EditText registPhoneNumber, registCustomerName, registAddressName, balance, inputAmount;
     Context mContext;
+    Double inputAmountDouble;
 
     /**
      * Method to request login
@@ -50,6 +51,7 @@ public class AboutMeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_me);
+        mContext = (AboutMeActivity.this);
         mApiService = UtilsApi.getApiService();
         System.out.println(LoginActivity.loggedAccount);
         namaKostumer = findViewById(R.id.nameOfCustomer);
@@ -59,8 +61,10 @@ public class AboutMeActivity extends AppCompatActivity {
         emailKostumer.setText(LoginActivity.loggedAccount.email);
         String balance = Double.toString(LoginActivity.loggedAccount.balance);
         saldoKostumer.setText(balance);
-
-
+        topUpButton = findViewById(R.id.topUpButton);
+        topup = findViewById(R.id.balanceOfCustomer);
+        inputAmount = findViewById(R.id.plain_text_input_amount);
+        logOutButton = findViewById(R.id.LogOutButton);
         registCustomerName = findViewById(R.id.registerRenterInsertName);
         registPhoneNumber = findViewById(R.id.registerRenterInsertPhoneNumber);
         registAddressName = findViewById(R.id.registerRenterInsertAddress);
@@ -97,6 +101,24 @@ public class AboutMeActivity extends AppCompatActivity {
                 registerRenterButt.setVisibility(View.VISIBLE);
                 cardview1.setVisibility(View.GONE);
                 cardview2.setVisibility(View.GONE);
+            }
+        });
+
+        topUpButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                inputAmountDouble = Double.parseDouble(inputAmount.getText().toString());
+                TopUp(LoginActivity.loggedAccount.id, inputAmountDouble);
+            }
+        });
+
+        logOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LoginActivity.loggedAccount = null;
+                Intent move = new Intent(AboutMeActivity.this, LoginActivity.class);
+                startActivity(move);
+                finish();
             }
         });
 
@@ -215,7 +237,7 @@ public class AboutMeActivity extends AppCompatActivity {
      * @param balance
      */
     protected Renter TopUp(int id, double balance){
-        mApiService.topUp(id,balance).enqueue(new Callback<Boolean>() {
+        mApiService.topUp(id,balance).enqueue(new Callback<Boolean>(){
             @Override
             public void onResponse(Call<Boolean> call, Response<Boolean> response) {
                 if(response.isSuccessful()){

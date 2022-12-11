@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFABB"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/createpayment_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Payment"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hotelNamediPayment"
+        android:layout_width="226dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:text="OYO"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createpayment_title" />
+
+    <TextView
+        android:id="@+id/hotelAddressdiPayment"
+        android:layout_width="326dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Jalan Jalan"
+        android:textSize="15sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hotelNamediPayment" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/payButtons"
+        android:layout_width="202dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="32dp"
+        android:text="Pay"
+        android:backgroundTint="#1E2D52"
+        android:textColor="#FFFABB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/chooseEnd"
+        android:layout_width="139dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:hint="End"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/textToDatePayment"
+        app:layout_constraintTop_toBottomOf="@+id/chooseStart" />
+
+    <TextView
+        android:id="@+id/totalPrice"
+        android:layout_width="144dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="Total"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/textTotalPricePayment"
+        app:layout_constraintTop_toBottomOf="@+id/chooseEnd" />
+
+    <TextView
+        android:id="@+id/namaBuyer"
+        android:layout_width="133dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="44dp"
+        android:gravity="center"
+        android:text="Buyer"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/textFromDatePayment2"
+        app:layout_constraintTop_toBottomOf="@+id/hotelAddressdiPayment" />
+
+    <TextView
+        android:id="@+id/textFromDatePayment2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="44dp"
+        android:text="Name"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hotelAddressdiPayment" />
+
+    <TextView
+        android:id="@+id/textToDatePayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="36dp"
+        android:text="To"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFromDatePayment" />
+
+    <TextView
+        android:id="@+id/textFromDatePayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="52dp"
+        android:text="From"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFromDatePayment2" />
+
+    <EditText
+        android:id="@+id/chooseStart"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:hint="Start"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/textFromDatePayment"
+        app:layout_constraintTop_toBottomOf="@+id/namaBuyer" />
+
+    <TextView
+        android:id="@+id/textTotalPricePayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="52dp"
+        android:text="Total Price"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textToDatePayment" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,7 +2,9 @@ package PrimaShalihJSleepJS.jsleep_android;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
@@ -20,6 +22,7 @@ public class DetailRoomActivity extends AppCompatActivity {
     public static Room temporaryRoom;
     TextView nameDetail, bedTypeDetail, sizeDetail, priceDetail, addressDetail, cityDetail;
     CheckBox ac, fridge, wifi, bathub, balcony, restaurant, pool, fitness;
+    Button bookButton;
 
     /**
      * This method is used to show the detail of the room
@@ -72,5 +75,11 @@ public class DetailRoomActivity extends AppCompatActivity {
                 fitness.setChecked(true);
             }
         }
+
+        bookButton = findViewById(R.id.bookButtonDetailRoom);
+        bookButton.setOnClickListener(v -> {
+            Intent intent = new Intent(DetailRoomActivity.this, MakePayment.class);
+            startActivity(intent);
+        });
     }
 }

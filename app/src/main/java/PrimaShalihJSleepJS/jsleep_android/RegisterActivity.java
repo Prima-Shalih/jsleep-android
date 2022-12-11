@@ -62,10 +62,7 @@ public class RegisterActivity extends AppCompatActivity {
      * @param name
      */
     protected Account requestRegister(String email, String password, String name ){
-        System.out.println("Ngetes1");
-        System.out.println(email);
-        System.out.println(password);
-        System.out.println(name);
+
         mApiService.register(email, password, name).enqueue(new Callback<Account>() {
             /**
              * Method to handle response

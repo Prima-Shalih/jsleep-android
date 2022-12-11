@@ -4,16 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailRoomActivity">
+    tools:context=".DetailRoomActivity"
+    android:background="#FFFABB"
+    >
 
     <TextView
         android:id="@+id/judulDetailRoom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
+        android:layout_marginStart="120dp"
         android:layout_marginTop="32dp"
         android:text="Detail Room"
-        android:textSize="20sp"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -191,10 +194,11 @@
         android:id="@+id/facilityTextDiDetailRoom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="168dp"
+        android:layout_marginStart="164dp"
         android:layout_marginTop="48dp"
         android:text="Facility"
-        android:textSize="20sp"
+        android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CityDetailRoom" />
 
@@ -227,6 +231,19 @@
         android:text="Depok"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AddressPilihanCustomerDiDetailRoom" />
+
+    <Button
+        android:id="@+id/bookButtonDetailRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="44dp"
+        android:text="BOOK"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxSwimmingPool"
+        android:backgroundTint="#1E2D52"
+        android:textColor="#FFFABB"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

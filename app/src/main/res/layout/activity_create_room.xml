@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateRoomActivity">
+    tools:context=".CreateRoomActivity"
+    android:background="#FFFABB"
+    >
 
     <CheckBox
         android:id="@+id/checkBoxBalcony"
@@ -33,6 +35,7 @@
         android:layout_marginStart="148dp"
         android:layout_marginTop="36dp"
         android:text="Facility"
+        android:textStyle="bold"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/InsertSizeCreateRoom" />
@@ -65,7 +68,10 @@
         android:layout_marginTop="20dp"
         android:text="CANCEL"
         app:layout_constraintStart_toEndOf="@+id/CreateRoomButton"
-        app:layout_constraintTop_toBottomOf="@+id/BedTypeSpinner" />
+        app:layout_constraintTop_toBottomOf="@+id/BedTypeSpinner"
+        android:backgroundTint="#1E2D52"
+        android:textColor="#FFFABB"
+        />
 
     <Button
         android:id="@+id/CreateRoomButton"
@@ -75,7 +81,10 @@
         android:layout_marginTop="20dp"
         android:text="CREATE"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BedTypeCreateRoom" />
+        app:layout_constraintTop_toBottomOf="@+id/BedTypeCreateRoom"
+        android:backgroundTint="#1E2D52"
+        android:textColor="#FFFABB"
+        />
 
     <TextView
         android:id="@+id/BedTypeCreateRoom"
@@ -199,6 +208,7 @@
         android:layout_marginStart="104dp"
         android:layout_marginTop="32dp"
         android:text="Create Room"
+        android:textStyle="bold"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -75,10 +75,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:clickable="true"
         android:text="Register Now!"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="#1E2D52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/DoNotHaveAccount" />
 </androidx.constraintlayout.widget.ConstraintLayout>
