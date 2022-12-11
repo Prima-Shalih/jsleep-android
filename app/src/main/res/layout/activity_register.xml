@@ -55,4 +55,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextTextPassword" />
 
+    <TextView
+        android:id="@+id/backButtoninRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:text="Back to Login"
+        android:textColor="#1E2D52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerNowButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

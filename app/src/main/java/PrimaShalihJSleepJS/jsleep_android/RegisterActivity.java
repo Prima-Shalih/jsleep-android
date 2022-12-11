@@ -29,7 +29,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     BaseApiService mApiService;
     Context mContext;
-    EditText email, password, name;
+    EditText email, password, name, backButton;
     Button registernow;
 
     @Override
@@ -49,6 +49,15 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View view){
                 System.out.println("Halo");
                 requestRegister(email.getText().toString(),password.getText().toString(), name.getText().toString());
+            }
+        });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LoginActivity.loggedAccount = null;
+                Intent move = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(move);
             }
         });
 
